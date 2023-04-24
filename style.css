@@ -1,0 +1,99 @@
+*{
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+    padding: 0 20px;
+}
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 5px;
+}
+main .bcg{
+    width: 47%;
+    background: hsl(277, 64%, 61%) url("images/image-header-desktop.jpg") no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    border-radius: 5px;
+}
+.content{
+    width: 43%;
+    padding: 55px;
+}
+.content p:first-of-type{
+    font-size: 36px;
+    font-weight: 700;
+}
+.content p:first-of-type span{
+    color:hsl(277, 64%, 61%)
+}
+.content p:last-of-type{
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.5;
+    margin-bottom: 55px;
+}
+.rates{
+    display: flex;
+    justify-content: space-evenly;
+}
+.rates div{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.rates div span:first-of-type{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+.rates div span:last-of-type{
+    color:hsla(0, 0%, 100%, 0.6);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+@media (max-width: 900px){
+    main{
+        flex-wrap: wrap;
+        flex-direction: row-reverse ;
+    }
+    .content{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content p:first-of-type {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .content p:last-of-type{
+        margin-bottom: 30px;
+    }
+    .rates{
+        flex-direction: column;
+    }
+    main .bcg{
+        width: 100%;
+        height: 200px;
+        border-radius: 5px 5px 0 0; 
+        margin-bottom: 25px;
+        background-image: url("images/image-header-mobile.jpg");
+    }
+    .rates div{
+        margin-bottom: 15px;
+        font-size: 20px;
+        align-items: center;
+    }
+}
